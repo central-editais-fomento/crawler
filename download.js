@@ -1,5 +1,6 @@
 const https = require('https');
 const fs = require('fs');
+const axios = require('axios');
 
 export default function download(page) {
     if (page.url.toLowerCase().indexOf(".pdf") > 0 && page.referer.toLowerCase().indexOf("/edital-") > 0) {
@@ -11,11 +12,14 @@ export default function download(page) {
             fs.mkdirSync(`./editais/${page.referer.slice(26)}`);
         }
         const file = fs.createWriteStream(`./editais/${page.referer.slice(26)}/${page.url.slice(58)}`);
-        https.get(page.url, response => response.pipe(file)).on("error", err => console.log(`Error: ${err.message}`));
+        https.get(page.url, response => response.pipe(file)).on("error", err => {
+            // axios.post('http://localhost:3333/api/errors', {
+            //     error: err
+            // });
+        });
         return arquivo;
     }
-    else 
-    {
+    else {
         return false;
     }
 };
