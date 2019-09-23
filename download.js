@@ -13,9 +13,9 @@ export default function download(page) {
         }
         const file = fs.createWriteStream(`./editais/${page.referer.slice(26)}/${page.url.slice(58)}`);
         https.get(page.url, response => response.pipe(file)).on("error", err => {
-            // axios.post('http://localhost:3333/api/errors', {
-            //     error: err
-            // });
+            axios.post('http://localhost:3333/api/errors', {
+                error: err
+            });
         });
         return arquivo;
     }

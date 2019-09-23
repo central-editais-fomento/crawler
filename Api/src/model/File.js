@@ -1,7 +1,17 @@
 const mongoose = require ('mongoose');
 
 const PaginaSchema = new mongoose.Schema({
-    pagina: Array,
+
+    pagina: {
+        type: {
+            pagina: String
+        },
+        type: {
+
+        }
+    }
+
+    // adicionar as palavras chaves
     
   
 });
