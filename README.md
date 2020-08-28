@@ -1,19 +1,23 @@
-# crawler
-Crawler para Indexação dos Editais.
+Crawler para Indexação de Editais.
 
-if (sistemaOperacional == Windows)
-{
-    baixar o poppler aqui: https://blog.alivate.com.au/poppler-windows/
-    adicionar o path (caminho) nas variaveis de ambiente(meu computador/propriedades/configurações avançadas do sistema/variáveis de ambiente).
-}
+`<hr >`
 
-# Para rodar o programa
+Instalação
+
+Windows:
+1. Baixe o poppler: https://blog.alivate.com.au/poppler-windows/
+1. Adicione o path (caminho) nas variaveis de ambiente(meu computador/propriedades/configurações avançadas do sistema/variáveis de ambiente).
+1. Baixe o yarn para windows: https://yarnpkg.com/lang/pt-br/docs/install/#windows-stable 
+
+`<hr >`
+
+Executando
 
 # Na pasta Api:
-baixar yarn para windows: https://yarnpkg.com/lang/pt-br/docs/install/#windows-stable , após isso, dar bash e dar yarn ;
-digitar: yarn dev.
+$ yarn
+
+$ yarn dev
 
 # Na pasta raiz
-dar bash;
-npm install;
-utilizar: npm run babel para rodar o script.
+$ npm install
+$ npm run babel
