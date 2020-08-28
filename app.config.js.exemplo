@@ -1,0 +1,11 @@
+var config = {};
+
+config.mongo = {};
+
+config.mongo.user     = '';
+config.mongo.password = '';
+config.mongo.url      = 'localhost';
+config.mongo.database = 'crawler';
+config.mongo.options  = '';
+
+module.exports = config;
